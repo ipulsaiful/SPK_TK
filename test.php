@@ -6,7 +6,7 @@
 	<?php
 	//session_start();
 	include("koneksi.php");
-    $sql = mysqli_query($db, "SELECT * FROM data_tk WHERE data_tk.Id_TK < 4");
+    $sql = mysqli_query($db, "SELECT * FROM data_tk");
     $result = array();
     
     while ($row = mysqli_fetch_assoc($sql)) {

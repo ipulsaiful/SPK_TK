@@ -322,13 +322,27 @@ $.getJSON("datatk.php", function(data) {
          var  tandatk = [data.result[i]['longtitude'], data.result[i]['latitude']];
 
          const distance = turf.distance(posisi,tandatk,options)
-         jarak.push([tandatk,distance]);
+         //jarak.push([tandatk,distance]);
+         jarak.push(distance);
+        
 
        }
+      
+        $.ajax({
+            url: 'hasil.php',
+            type: 'post',
+            data:{data:jarak},
+            success: function(data){
+              console.log(data);
+              //window.location.href="metode.php";
+            }
 
-       console.log(jarak)
+        });
+       //console.log(jarak)
 
      });
+
+
 
 
 });

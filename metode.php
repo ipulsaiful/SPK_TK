@@ -1,9 +1,16 @@
 <?php
-//session_start();
+session_start();
 //ob_start();
 include("koneksi.php");
 //ob_end_clean();
-if (isset($_POST['submit'])) {
+$arr = $_SESSION['array'];
+//json_decode($arr)
+//echo var_dump($arr);
+foreach ($arr as $jarak) {
+	echo $jarak."<br>";
+}
+
+/*if (isset($_POST['submit'])) {
 	$nmbobot1 = $_POST['bobot_1'];
 	$nlbobot1 = (1+(1/2)+(1/3)+(1/4)+(1/5)+(1/6)+(1/7))/7;
 
@@ -111,7 +118,7 @@ $redirect = "PilihTK.php?".http_build_query($dataVi);
 
 
 //header("location: PilihTK.php"); 	
-}
+}*/
 
 
 
